@@ -17,7 +17,19 @@ Dhhp8M5K3UI;14/11/2017;Deleted video;Harrison;Entertainment;53265;194;41
 sBmvgi-gd2M;14/11/2017;Así lucen los dobles de estos famosos;Badabun;Entertainment;53340;5266;68
 QzlD0W4J8mk;14/11/2017;Sismo de 7.3 sacude Irak;MILENIO;News & Politics;5421;21;7
 ```
-El objetivo del ejercicio es leer estos datos, realizar distintas operaciones con ellos e implementar los test que permitan probarlas. Cada operación se implementará en una función distinta. Se pide implementar las siguientes funciones y sus test correspondientes, teniendo en cuenta que se pueden definir funciones auxiliares cuando se considere necesario:
+El objetivo del ejercicio es leer estos datos, realizar distintas operaciones con ellos e implementar los test que permitan probarlas. Cada operación se implementará en una función distinta. Se pide implementar las siguientes funciones y sus test correspondientes, teniendo en cuenta que se pueden definir funciones auxiliares cuando se considere necesario. Use la siguiente definición de namedtuple:
+```python
+from typing import NamedTuple
+Video = NamedTuple('Video', 
+[('id_video', str),
+ ('fecha_trending', date),
+ ('titulo,canal', str),
+ ('categoria', str),
+ ('visitas', int),
+ ('likes', int),
+ ('dislikes', int)
+])
+```
 
 1. **lee\_trending\_videos**:** lee un fichero de entrada en formato CSV y devuelve una lista de tuplas de tipo Video conteniendo todos los datos almacenados en el fichero. (1 punto)
 1. **media\_visitas**: recibe una lista de tuplas de tipo Video y una fecha. Devuelve la media de visitas de una fecha dada. Si para esa fecha no hay registros, la función devuelve cero. _(1 punto)_
